@@ -1,0 +1,76 @@
+##token generate
+
+POST::  localhost:8080/api/public/token-create
+
+{
+
+    "username":"Admin",
+    "password":"admin",
+    "id":1
+    }
+
+
+
+##get all users
+
+GET:: http://localhost:8080/api/secure/allUser
+
+## insert camera
+
+POST:: http://localhost:8080/api/secure/addCamera
+
+{
+
+    "cameraClass" : "B",
+    "cameraDesc" : "Web CAM 2"
+
+}
+
+## insert location
+
+POST::http://localhost:8080/api/secure/addLocation
+
+{
+
+    "locationDesc" : "Baluwatar",
+    "cameraId" : 1
+}
+
+## insert vehicle
+
+POST:: http://localhost:8080/api/secure/addVehicle
+{
+
+    "vehicleType" : "Car",
+    "vehicleDesc" : "Hyundai",
+    "vehicleOwner" : "John"
+
+}
+
+## mapping vehicle to location
+
+POST:: http://localhost:8080/api/secure/addVehicleMapping
+{
+
+    "vehicleId" : 1,
+    "locationId" : 1
+}
+
+## inserting the vehicle movement
+
+ POST::  http://localhost:8080/api/secure/addVehicleMovement
+
+{
+
+    "vehicleId" : 1,
+    "vehicleMovement" : 100.5,
+    "fromDate" : "2020-01-14 10:00:00",
+    "toDate" : "2020-01-14 11:00:00"
+}
+
+## get vehicle movement report camera and location filter
+Specific
+GET:: http://localhost:8080/api/secure/getVehicleMovement?locationId=3&cameraId=1
+http://localhost:8080/api/secure/getVehicleMovement?locationId=4&cameraId=2
+ALL
+GET: http://localhost:8080/api/secure/getVehicleMovement?locationId=0&cameraId=0

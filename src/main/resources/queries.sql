@@ -1,0 +1,183 @@
+CREATE TABLE [dbo].[user](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[created_date] [date] NULL,
+	[is_admin] [bit] NULL,
+	[updated_date] [date] NULL,
+	[user_address] [varchar](255) NULL,
+	[user_name] [varchar](255) NULL,
+	[user_password] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[user_roles](
+	[user_id] [int] NOT NULL,
+	[role_id] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[user_id] ASC,
+	[role_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[user_roles]  WITH CHECK ADD  CONSTRAINT [FK57iowcwyc3mq09y696sj6xtgv] FOREIGN KEY([role_id])
+REFERENCES [dbo].[vts_role] ([ID])
+GO
+
+ALTER TABLE [dbo].[user_roles] CHECK CONSTRAINT [FK57iowcwyc3mq09y696sj6xtgv]
+GO
+
+ALTER TABLE [dbo].[user_roles]  WITH CHECK ADD  CONSTRAINT [FK9itpnrbo1dlnb2lecbg65ccee] FOREIGN KEY([user_id])
+REFERENCES [dbo].[vts_user] ([ID])
+GO
+
+ALTER TABLE [dbo].[user_roles] CHECK CONSTRAINT [FK9itpnrbo1dlnb2lecbg65ccee]
+GO
+
+
+CREATE TABLE [dbo].[vts_camera](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[CAMERA_CLASS] [varchar](50) NULL,
+	[CAMERA_DESC] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+CREATE TABLE [dbo].[vts_location](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[LOCATION_DESC] [varchar](50) NULL,
+	[CAMERA_ID] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[vts_location]  WITH CHECK ADD FOREIGN KEY([CAMERA_ID])
+REFERENCES [dbo].[vts_camera] ([ID])
+GO
+
+ALTER TABLE [dbo].[vts_location]  WITH CHECK ADD  CONSTRAINT [FK7nxwtfxblwynbxmswrn3mm59c] FOREIGN KEY([CAMERA_ID])
+REFERENCES [dbo].[vts_camera] ([ID])
+GO
+
+ALTER TABLE [dbo].[vts_location] CHECK CONSTRAINT [FK7nxwtfxblwynbxmswrn3mm59c]
+GO
+
+
+CREATE TABLE [dbo].[vts_role](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ROLE_NAME] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[vts_user](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[USER_NAME] [varchar](50) NULL,
+	[USER_PASSWORD] [varchar](100) NULL,
+	[USER_ADDRESS] [varchar](50) NULL,
+	[CREATED_DATE] [date] NULL,
+	[UPDATED_DATE] [date] NULL,
+	[IS_ADMIN] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+CREATE TABLE [dbo].[vts_user_Roles](
+	[USER_ID] [int] NULL,
+	[ROLE_ID] [int] NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+CREATE TABLE [dbo].[vts_vehicle](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[VEHICLE_TYPE] [varchar](50) NULL,
+	[VEHICLE_DESC] [varchar](50) NULL,
+	[VEHICLE_OWNER] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[vts_vehicle_mapping](
+	[LOCATION_ID] [int] NULL,
+	[VEHICLE_ID] [int] NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+CREATE TABLE [dbo].[vts_vehicle_movement](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[VEHICLE_MOVEMENT] [decimal](18, 3) NULL,
+	[VEHICLE_ID] [int] NULL,
+	[FROM_DATE] [datetime] NULL,
+	[TO_DATE] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+CREATE   PROCEDURE [dbo].[vts_vehicleMovement]
+	(
+	@locationId int,
+	@cameraId int
+	)
+	AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+	
+    -- Insert statements for procedure here
+	SELECT VEHICLE_DESC,VEHICLE_OWNER,VEHICLE_TYPE,LOCATION_DESC,CAMERA_CLASS,CAMERA_DESC,VEHICLE_MOVEMENT,FROM_DATE,TO_DATE
+	from vts_vehicle_movement vm
+	inner join vts_vehicle v 
+	on v.ID = vm.VEHICLE_ID
+	inner join vts_vehicle_mapping vlm
+	on vlm.VEHICLE_ID = v.ID
+	inner join vts_location l
+	on l.ID = vlm.LOCATION_ID
+	inner join vts_camera c
+	on c.ID = l.CAMERA_ID
+	where l.ID = Case when (@locationId = 0) then  l.ID else @locationId end
+	and
+	c.ID = Case when (@cameraId = 0) then  c.ID else @cameraId end
+
+END
+GO
+
+

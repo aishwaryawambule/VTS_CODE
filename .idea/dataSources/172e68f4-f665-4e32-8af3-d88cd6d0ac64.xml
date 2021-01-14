@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project_utility@127.0.0.1">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.20">
+    <root id="1">
+      <ServerVersion>15.0.2000</ServerVersion>
+      <PermissionsCheckSum>43840685535</PermissionsCheckSum>
+      <Grants>0|root||1|connect sql|G
+0|root||2|view any database|G
+0|root||101|view any definition|G
+0|root||102|authenticate server|G
+0|root||102|view any definition|G
+0|root||102|view server state|G
+0|root||103|authenticate server|G
+0|root||105|control server|G
+0|root||105|view any definition|G
+0|root||106|view any definition|G
+0|root||256|connect sql|G
+0|root||257|connect sql|G
+0|root||257|view any definition|G
+0|root||257|view server state|G
+0|root||258|connect sql|G
+0|root||259|connect sql|G
+0|root||260|connect sql|G
+0|root||261|connect sql|G
+0|root||262|connect sql|G
+0|root||263|alter any availability group|G
+0|root||263|connect sql|G
+0|root||263|view server state|G
+0|root||264|connect sql|G
+0|root||265|alter any event session|G
+0|root||265|connect any database|G
+0|root||265|connect sql|G
+0|root||265|view any definition|G
+0|root||265|view server state|G
+2|||2|connect|G
+3|||2|connect|G
+4|||2|connect|G
+5|||2|connect|G
+</Grants>
+    </root>
+    <database id="2" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="3" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="4" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="project_utility">
+      <ObjectId>5</ObjectId>
+      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
+      <Grants>5|database||0|view any column encryption key definition|G
+5|database||0|view any column master key definition|G
+5|database||1|connect|G
+</Grants>
+      <Current>1</Current>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <Fingerprint>5.44207/4CB5A900-7103-46C4-AC32-D4308BA7D4C7@DESKTOP-4TKAEGF</Fingerprint>
+    </database>
+    <database id="6" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+    </database>
+    <login id="7" parent="1" name="sa">
+      <ObjectId>1</ObjectId>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="8" parent="1" name="public">
+      <ObjectId>2</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="9" parent="1" name="sysadmin">
+      <ObjectId>3</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="10" parent="1" name="securityadmin">
+      <ObjectId>4</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="11" parent="1" name="serveradmin">
+      <ObjectId>5</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="12" parent="1" name="setupadmin">
+      <ObjectId>6</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="13" parent="1" name="processadmin">
+      <ObjectId>7</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="14" parent="1" name="diskadmin">
+      <ObjectId>8</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="15" parent="1" name="dbcreator">
+      <ObjectId>9</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="16" parent="1" name="bulkadmin">
+      <ObjectId>10</ObjectId>
+      <Type>server-role</Type>
+      <Enabled>1</Enabled>
+    </login>
+    <login id="17" parent="1" name="##MS_SQLResourceSigningCertificate##">
+      <ObjectId>101</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="18" parent="1" name="##MS_SQLReplicationSigningCertificate##">
+      <ObjectId>102</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="19" parent="1" name="##MS_SQLAuthenticatorCertificate##">
+      <ObjectId>103</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="20" parent="1" name="##MS_PolicySigningCertificate##">
+      <ObjectId>105</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="21" parent="1" name="##MS_SmoExtendedSigningCertificate##">
+      <ObjectId>106</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="22" parent="1" name="##MS_PolicyEventProcessingLogin##">
+      <ObjectId>256</ObjectId>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="23" parent="1" name="##MS_PolicyTsqlExecutionLogin##">
+      <ObjectId>257</ObjectId>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="24" parent="1" name="##MS_AgentSigningCertificate##">
+      <ObjectId>258</ObjectId>
+      <Type>certificate-mapped-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="25" parent="1" name="DESKTOP-4TKAEGF\aishw">
+      <ObjectId>259</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="26" parent="1" name="NT SERVICE\SQLWriter">
+      <ObjectId>260</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="27" parent="1" name="NT SERVICE\Winmgmt">
+      <ObjectId>261</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="28" parent="1" name="NT Service\MSSQLSERVER">
+      <ObjectId>262</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="29" parent="1" name="NT AUTHORITY\SYSTEM">
+      <ObjectId>263</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="30" parent="1" name="NT SERVICE\SQLSERVERAGENT">
+      <ObjectId>264</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <login id="31" parent="1" name="NT SERVICE\SQLTELEMETRY">
+      <ObjectId>265</ObjectId>
+      <Type>windows-login</Type>
+      <Enabled>1</Enabled>
+      <DefaultDatabase>master</DefaultDatabase>
+    </login>
+    <schema id="32" parent="5" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="33" parent="5" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="34" parent="5" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="35" parent="5" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="36" parent="5" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="37" parent="5" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="38" parent="5" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="39" parent="5" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="40" parent="5" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="41" parent="5" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="42" parent="5" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2021-01-14.04:13:20.957</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="43" parent="5" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="44" parent="5" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <role id="45" parent="5" name="public">
+      <ObjectId>0</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="46" parent="5" name="dbo">
+      <ObjectId>1</ObjectId>
+      <DefaultSchema>dbo</DefaultSchema>
+      <AuthType>instance</AuthType>
+    </role>
+    <role id="47" parent="5" name="guest">
+      <ObjectId>2</ObjectId>
+      <DefaultSchema>guest</DefaultSchema>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="48" parent="5" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="49" parent="5" name="sys">
+      <ObjectId>4</ObjectId>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="50" parent="5" name="db_owner">
+      <ObjectId>16384</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="51" parent="5" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="52" parent="5" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="53" parent="5" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="54" parent="5" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="55" parent="5" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="56" parent="5" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="57" parent="5" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <role id="58" parent="5" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+      <OwnerId>1</OwnerId>
+      <Type>database-role</Type>
+      <AuthType>none</AuthType>
+    </role>
+    <table id="59" parent="42" name="user">
+      <ObjectId>1029578706</ObjectId>
+      <CreatedTimestamp>2021-01-13.21:35:06.840</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.21:35:06.840</ModifiedTimestamp>
+    </table>
+    <table id="60" parent="42" name="vts_camera">
+      <ObjectId>645577338</ObjectId>
+      <CreatedTimestamp>2021-01-13.17:13:27.567</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.18:59:04.680</ModifiedTimestamp>
+    </table>
+    <table id="61" parent="42" name="vts_location">
+      <ObjectId>677577452</ObjectId>
+      <CreatedTimestamp>2021-01-13.17:13:33.947</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.447</ModifiedTimestamp>
+    </table>
+    <table id="62" parent="42" name="vts_role">
+      <ObjectId>1221579390</ObjectId>
+      <CreatedTimestamp>2021-01-14.03:33:01.913</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.430</ModifiedTimestamp>
+    </table>
+    <table id="63" parent="42" name="vts_user">
+      <ObjectId>997578592</ObjectId>
+      <CreatedTimestamp>2021-01-13.19:22:00.223</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.433</ModifiedTimestamp>
+    </table>
+    <table id="64" parent="42" name="vts_userRoles">
+      <ObjectId>1253579504</ObjectId>
+      <CreatedTimestamp>2021-01-14.03:33:04.333</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:33:04.333</ModifiedTimestamp>
+    </table>
+    <table id="65" parent="42" name="vts_user_roles">
+      <ObjectId>1317579732</ObjectId>
+      <CreatedTimestamp>2021-01-14.03:42:58.420</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.433</ModifiedTimestamp>
+    </table>
+    <table id="66" parent="42" name="vts_vehicle">
+      <ObjectId>853578079</ObjectId>
+      <CreatedTimestamp>2021-01-13.17:43:20.433</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.450</ModifiedTimestamp>
+    </table>
+    <table id="67" parent="42" name="vts_vehicle_mapping">
+      <ObjectId>901578250</ObjectId>
+      <CreatedTimestamp>2021-01-13.17:43:20.443</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.443</ModifiedTimestamp>
+    </table>
+    <table id="68" parent="42" name="vts_vehicle_movement">
+      <ObjectId>949578421</ObjectId>
+      <CreatedTimestamp>2021-01-13.17:43:20.447</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.447</ModifiedTimestamp>
+    </table>
+    <column id="69" parent="59" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="59" name="created_date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="71" parent="59" name="is_admin">
+      <Position>3</Position>
+      <DataType>bit|0s</DataType>
+    </column>
+    <column id="72" parent="59" name="updated_date">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="73" parent="59" name="user_address">
+      <Position>5</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <column id="74" parent="59" name="user_name">
+      <Position>6</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <column id="75" parent="59" name="user_password">
+      <Position>7</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <index id="76" parent="59" name="PK__user__3213E83FC6C944BF">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="59" name="PK__user__3213E83FC6C944BF">
+      <ObjectId>1045578763</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.21:35:06.860</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.21:35:06.860</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__user__3213E83FC6C944BF</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="78" parent="60" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="60" name="CAMERA_CLASS">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="80" parent="60" name="CAMERA_DESC">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="81" parent="60" name="PK__vts_came__3214EC27BBBE6862">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="60" name="PK__vts_came__3214EC27BBBE6862">
+      <ObjectId>661577395</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:13:27.567</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:13:27.567</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_came__3214EC27BBBE6862</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="83" parent="61" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="61" name="LOCATION_DESC">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="85" parent="61" name="CAMERA_ID">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="86" parent="61" name="PK__vts_loca__3214EC2763B94406">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="61" name="PK__vts_loca__3214EC2763B94406">
+      <ObjectId>693577509</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:13:33.947</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:13:33.947</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_loca__3214EC2763B94406</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="61" name="FK__vts_locat__CAMER__2A4B4B5E">
+      <ObjectId>709577566</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:13:33.947</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:13:33.947</ModifiedTimestamp>
+      <ColNames>CAMERA_ID</ColNames>
+      <RefTableId>645577338</RefTableId>
+      <RefTableName>vts_camera</RefTableName>
+      <RefKeyName>PK__vts_came__3214EC27BBBE6862</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="89" parent="62" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="62" name="ROLE_NAME">
+      <Position>2</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <index id="91" parent="62" name="PK__vts_role__3214EC27BC603A8B">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="92" parent="62" name="PK__vts_role__3214EC27BC603A8B">
+      <ObjectId>1237579447</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-14.03:33:01.937</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:33:01.937</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_role__3214EC27BC603A8B</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="63" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="63" name="USER_NAME">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="95" parent="63" name="USER_PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="96" parent="63" name="USER_ADDRESS">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="97" parent="63" name="CREATED_DATE">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="98" parent="63" name="UPDATED_DATE">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="99" parent="63" name="IS_ADMIN">
+      <Position>7</Position>
+      <DataType>bit|0s</DataType>
+    </column>
+    <index id="100" parent="63" name="PK__vts_user__3214EC27322A5031">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="101" parent="63" name="PK__vts_user__3214EC27322A5031">
+      <ObjectId>1013578649</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.19:22:00.713</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.19:22:00.713</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_user__3214EC27322A5031</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="102" parent="64" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="64" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="104" parent="64" name="ROLE_ID">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="105" parent="64" name="PK__vts_user__3214EC27A7B364D1">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="64" name="PK__vts_user__3214EC27A7B364D1">
+      <ObjectId>1269579561</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-14.03:33:04.333</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:33:04.333</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_user__3214EC27A7B364D1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="107" parent="64" name="FK__vts_userR__USER___4CA06362">
+      <ObjectId>1285579618</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-14.03:33:04.333</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:33:04.333</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <RefTableId>997578592</RefTableId>
+      <RefTableName>vts_user</RefTableName>
+      <RefKeyName>PK__vts_user__3214EC27322A5031</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="108" parent="64" name="FK__vts_userR__ROLE___4D94879B">
+      <ObjectId>1301579675</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-14.03:33:04.337</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:33:04.337</ModifiedTimestamp>
+      <ColNames>ROLE_ID</ColNames>
+      <RefTableId>1221579390</RefTableId>
+      <RefTableName>vts_role</RefTableName>
+      <RefKeyName>PK__vts_role__3214EC27BC603A8B</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="109" parent="65" name="user_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="65" name="role_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="111" parent="65" name="PK__vts_user__6EDEA1534E8414AC">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+role_id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="65" name="PK__vts_user__6EDEA1534E8414AC">
+      <ObjectId>1333579789</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-14.03:42:58.423</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.423</ModifiedTimestamp>
+      <ColNames>user_id
+role_id</ColNames>
+      <UnderlyingIndexName>PK__vts_user__6EDEA1534E8414AC</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="113" parent="65" name="FK9woytoclwf2h0a8v2s7o75cn8">
+      <ObjectId>1365579903</ObjectId>
+      <CreatedTimestamp>2021-01-14.03:42:58.433</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.433</ModifiedTimestamp>
+      <ColNames>user_id</ColNames>
+      <RefTableId>997578592</RefTableId>
+      <RefTableName>vts_user</RefTableName>
+      <RefKeyName>PK__vts_user__3214EC27322A5031</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="114" parent="65" name="FKaukcqm8wpfs34dlt0x0nbpurx">
+      <ObjectId>1349579846</ObjectId>
+      <CreatedTimestamp>2021-01-14.03:42:58.430</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-14.03:42:58.430</ModifiedTimestamp>
+      <ColNames>role_id</ColNames>
+      <RefTableId>1221579390</RefTableId>
+      <RefTableName>vts_role</RefTableName>
+      <RefKeyName>PK__vts_role__3214EC27BC603A8B</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="115" parent="66" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="66" name="VEHICLE_TYPE">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="117" parent="66" name="VEHICLE_DESC">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="118" parent="66" name="VEHICLE_OWNER">
+      <Position>4</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="119" parent="66" name="PK__vts_vehi__3214EC27D9650221">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="120" parent="66" name="PK__vts_vehi__3214EC27D9650221">
+      <ObjectId>869578136</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.440</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.440</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_vehi__3214EC27D9650221</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="121" parent="66" name="CK__vts_vehic__VEHIC__34C8D9D1">
+      <ObjectId>885578193</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.440</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.440</ModifiedTimestamp>
+      <ColNames>VEHICLE_TYPE</ColNames>
+      <Predicate>[VEHICLE_TYPE]=&apos;CAR&apos; OR [VEHICLE_TYPE]=&apos;BIKE&apos; OR [VEHICLE_TYPE]=&apos;SCOOTER&apos; OR [VEHICLE_TYPE]=&apos;HEAVY_VEHICLE&apos;</Predicate>
+    </check>
+    <column id="122" parent="67" name="LOCATION_ID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="123" parent="67" name="VEHICLE_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <foreign-key id="124" parent="67" name="FK__vts_vehic__LOCAT__36B12243">
+      <ObjectId>917578307</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.447</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.447</ModifiedTimestamp>
+      <ColNames>LOCATION_ID</ColNames>
+      <RefTableId>677577452</RefTableId>
+      <RefTableName>vts_location</RefTableName>
+      <RefKeyName>PK__vts_loca__3214EC2763B94406</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="125" parent="67" name="FK__vts_vehic__VEHIC__37A5467C">
+      <ObjectId>933578364</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.447</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.447</ModifiedTimestamp>
+      <ColNames>VEHICLE_ID</ColNames>
+      <RefTableId>853578079</RefTableId>
+      <RefTableName>vts_vehicle</RefTableName>
+      <RefKeyName>PK__vts_vehi__3214EC27D9650221</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="126" parent="68" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="68" name="VEHICLE_MOVEMENT">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="128" parent="68" name="VEHICLE_ID">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="129" parent="68" name="RECORDED_DATE">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="130" parent="68" name="PK__vts_vehi__3214EC275AEE970A">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="68" name="PK__vts_vehi__3214EC275AEE970A">
+      <ObjectId>965578478</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.450</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.450</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__vts_vehi__3214EC275AEE970A</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="132" parent="68" name="FK__vts_vehic__VEHIC__3A81B327">
+      <ObjectId>981578535</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-13.17:43:20.450</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-13.17:43:20.450</ModifiedTimestamp>
+      <ColNames>VEHICLE_ID</ColNames>
+      <RefTableId>853578079</RefTableId>
+      <RefTableName>vts_vehicle</RefTableName>
+      <RefKeyName>PK__vts_vehi__3214EC27D9650221</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
